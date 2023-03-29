@@ -19,27 +19,23 @@ return choice;
 
 //win condition messages
 function winMessage() {
-    console.log("Congrats! You won.")
+    alert("Congrats! You won.")
 }
 
 function loseMessage() {
-    console.log("Sorry! You lost.")
+    alert("Sorry! You lost.")
 }
 
 function tieMessage() {
-    console.log("Darn! You tied.")
+    alert("Darn! You tied.")
 }
 
 // if statement
 
-if ((userChoice === "R") && (compChoice === "P")) {
+if (userChoice === "R" && compChoice === "P" || userChoice === "S" && compChoice === "R" || userChoice === "P" && compChoice === "S") {
     console.log(loseMessage);
-}
-
-if ((userChoice === "R") && (compChoice === "R")) {
-    console.log(tieMessage);
-}
-
-if ((userChoice === "R") && (compChoice === "S")) {
+} else if (userChoice === "R" && compChoice === "S" || userChoice === "S" && compChoice === "P" || userChoice === "P" && compChoice === "R") {
     console.log(winMessage);
+} else {
+    console.log(tieMessage);
 }
