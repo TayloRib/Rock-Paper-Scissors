@@ -30,4 +30,16 @@ function tieMessage() {
     console.log("Darn! You tied.")
 }
 
-//
+// if statement
+
+if ((userChoice === "R") && (compChoice === "P")) {
+    console.log(loseMessage);
+}
+
+if ((userChoice === "R") && (compChoice === "R")) {
+    console.log(tieMessage);
+}
+
+if ((userChoice === "R") && (compChoice === "S")) {
+    console.log(winMessage);
+}
