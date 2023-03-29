@@ -4,7 +4,20 @@ let userChoice = prompt("Please select R, P, or S to start playing.")
 
 console.log(userChoice)
 
+//Array for choices
+let choices = ["R", "P", "S"];
 
+//function that runs random choice
+let compChoice = randNum(choices);
+console.log(compChoice);
+
+
+function randNum(arr){
+let choice = arr[Math.floor(Math.random() * arr.length)];
+return choice;
+}
+
+//win condition messages
 function winMessage() {
     console.log("Congrats! You won.")
 }
@@ -16,3 +29,5 @@ function loseMessage() {
 function tieMessage() {
     console.log("Darn! You tied.")
 }
+
+//
