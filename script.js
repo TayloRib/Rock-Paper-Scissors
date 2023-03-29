@@ -1,0 +1,1 @@
+alert("Welcome to our rock, paper, scissors game!");
